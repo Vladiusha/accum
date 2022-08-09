@@ -1,0 +1,62 @@
+.field {
+    width: 100%;
+    margin-bottom: 30px;
+
+    display: grid;
+    grid-template-areas: "l v";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.numericFieldHeight {
+    height: 30px;
+}
+
+.textareaHeight {
+    height: 310px;
+}
+
+.buttonsField {
+    display: block;
+    text-align: right;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.buttonsFieldMargin {
+    margin: 5px;
+}
+
+.label {
+    grid-area: l;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.value {
+    grid-area: v;
+    height: 30px;
+}
+
+.valueField {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    border: 2px solid #adadad;
+}
+
+.textareaValue {
+    grid-area: v;
+    height: 300px;
+}
+
+.textareaValueField {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    border: 2px solid #adadad;
+    resize: none;
+}

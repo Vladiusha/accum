@@ -1,0 +1,20 @@
+.tabButton {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    height: 10px;
+
+    border: 3px solid black;
+    border-radius: 5px 20px 0 0;
+    cursor: pointer;
+}
+
+.activeTab {
+    background-color: black;
+    color: white;
+}
+
+.unactiveTab {
+    background-color: white;
+    color: black;
+}

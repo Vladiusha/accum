@@ -1,0 +1,25 @@
+.customButton {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    height: 20px;
+    min-width: 70px;
+
+    background-color: #adadad;
+    color: white;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+.configButtonApply {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.configExampleButton {
+    right: 10px;
+    top: 0;
+    position: absolute;
+}
