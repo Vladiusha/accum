@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Button from "../button/Button";
-import buttonStyles from '../button/Button.module.css'
+import Button from "../Button/Button";
+import buttonStyles from '../Button/Button.module.css'
 import {validateJson} from '../../utils/jsonUtils'
 import {configSetUp, textareaConfigTabPlaceholder} from "../../constants";
 

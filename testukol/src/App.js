@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from 'react'
-import Page from "./components/pages/Page";
+import Page from "./components/Pages/Page";
 import {CONF_EXAMP_TAB} from "./constants";
 
 const App = () => {

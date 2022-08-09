@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
-import InputField from "../fields/InputField";
-import TextareaField from "../fields/TextareaField";
-import ButtonsField from "../fields/ButtonsField";
+import InputField from "../Fields/InputField";
+import TextareaField from "../Fields/TextareaField";
+import ButtonsField from "../Fields/ButtonsField";
 
 const ResultPage = (props) => {
     const [data, setData] = useState([])

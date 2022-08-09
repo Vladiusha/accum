@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import styles from './Fields.module.css'
-import Button from "../button/Button";
+import Button from "../Button/Button";
 
 
 const ButtonsField = (props) => {

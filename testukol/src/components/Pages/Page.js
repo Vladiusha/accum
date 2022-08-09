@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import TabButton from '../tabButton/TabButton'
+import TabButton from '../TabButton/TabButton'
 import ConfigPage from "./ConfigPage";
 import ResultPage from "./ResultPage";
 import {CONF_EXAMP_TAB, CONF_TAB, RESULT_TAB} from "../../constants";
-import tabButtonStyles from '../tabButton/TabButton.module.css'
+import tabButtonStyles from '../TabButton/TabButton.module.css'
 import ConfigExamplePage from "./ConfigExamplePage";
 
 const Page = (props) => {
