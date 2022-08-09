@@ -15,7 +15,7 @@ const ConfigPage = (props) => {
     }
 
     return (
-        <div id='configPage'>
+        <div className={'configPageStructure'} id='configPage'>
             <div id='configHelpText'>
                 Please set your own config or go with initial one!
             </div>
