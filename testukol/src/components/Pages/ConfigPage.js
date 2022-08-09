@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Button from "../Button/Button";
 import buttonStyles from '../Button/Button.module.css'
 import {validateJson} from '../../utils/jsonUtils'
-import {configSetUp, textareaConfigTabPlaceholder} from "../../constants";
+import {configSetUp, RESULT_TAB, textareaConfigTabPlaceholder} from "../../constants";
 
 const ConfigPage = (props) => {
     const [configText, setConfigText] = useState("")
@@ -12,6 +12,7 @@ const ConfigPage = (props) => {
         if (!result.success) return
         props.setData(result.json)
         alert(configSetUp)
+        props.setActiveTab(RESULT_TAB)
     }
 
     return (

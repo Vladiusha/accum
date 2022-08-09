@@ -26,7 +26,7 @@ const Page = (props) => {
                 {(() => {
                     switch (props.activeTab) {
                         case CONF_TAB :
-                            return <ConfigPage setData={setData}/>
+                            return <ConfigPage setData={setData} setActiveTab={props.setActiveTab}/>
                         case RESULT_TAB:
                             return <ResultPage data={data}/>
                         case CONF_EXAMP_TAB:
