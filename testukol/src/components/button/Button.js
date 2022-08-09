@@ -5,9 +5,9 @@ import classNames from "classnames"
 const Button = (props) => {
 
     return (
-        <div className={classNames(styles.customButton, props.styleClass)} onClick={props.onClick}>
+        <button className={classNames(styles.customButton, styles.customButtonSize, props.styleClass)} onClick={props.onClick}>
             {props.title}
-        </div>
+        </button>
     )
 }
 

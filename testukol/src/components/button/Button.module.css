@@ -2,8 +2,7 @@
     text-align: center;
     padding: 10px;
     display: inline-block;
-    height: 20px;
-    min-width: 70px;
+    height: 40px;
 
     background-color: #adadad;
     color: white;
@@ -12,14 +11,30 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1000px){
+    .customButtonSize {
+        width: 100%;
+    }
+
+    .configExampleButton {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .configExampleButton {
+        right: 10px;
+        top: 0;
+        position: absolute;
+    }
+}
+
+.customButtonSize {
+    min-width: 70px;
+}
+
 .configButtonApply {
     position: absolute;
     bottom: 0;
     right: 0;
-}
-
-.configExampleButton {
-    right: 10px;
-    top: 0;
-    position: absolute;
 }

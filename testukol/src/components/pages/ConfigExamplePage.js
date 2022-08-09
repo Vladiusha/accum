@@ -20,8 +20,8 @@ const ConfigExamplePage = () => {
     return (
         <div id='configExamplePage'>
             <div id='configExampleText'>
-                {exampleConfigText}
                 <Button title='Copy example' styleClass={buttonStyles.configExampleButton} onClick={copyText}/>
+                <span id='exampleConfigText'>{exampleConfigText}</span>
             </div>
         </div>
     )

@@ -10,6 +10,7 @@ const InputField = (props) => {
             <div className={styles.label}>{props.label}</div>
             <div className={styles.value}>
                 <input className={styles.valueField}
+                       // type={undefined}
                        type={props.type}
                        value={value}
                        onChange={e => setValue(e.target.value)}
