@@ -4,6 +4,10 @@
   position: relative;
 }
 
+:root {
+  --gray: #adadad;
+}
+
 #pageWrapper {
   width: 80%;
   margin: 100px auto;
@@ -60,7 +64,7 @@
 
 #configHelpText {
   grid-area: h;
-  color: #adadad;
+  color: var(--gray);
 }
 
 #configTextareaWrapper {
