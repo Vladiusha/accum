@@ -1,3 +1,5 @@
+//@flow
+
 import React, {useEffect, useState} from 'react'
 import Field from "../Fields/Field";
 import TextareaField from "../Fields/TextareaField";
@@ -8,7 +10,11 @@ import NumberField from "../Fields/NumberField";
 import CheckboxField from "../Fields/CheckboxField";
 import DateField from "../Fields/DateField";
 
-const ResultPage = (props) => {
+type ResultPageProps = {
+    data: Array<Object>
+}
+
+const ResultPage = (props : ResultPageProps) : Object => {
     const [data, setData] = useState([])
 
     useEffect(() => {

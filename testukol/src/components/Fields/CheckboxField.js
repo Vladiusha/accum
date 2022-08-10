@@ -1,8 +1,15 @@
+//@flow
+
 import React, {useState} from 'react'
 import styles from './Fields.module.css'
 import classNames from "classnames";
 
-const CheckboxField = (props) => {
+type CheckboxFieldProps = {
+    checked: boolean,
+    styleClass: string
+}
+
+const CheckboxField = (props : CheckboxFieldProps) : Object => {
     const [value, setValue] = useState(props.checked)
 
     return (

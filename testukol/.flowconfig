@@ -1,0 +1,18 @@
+[ignore]
+.*/node_modules/@babel/*
+.*/node_modules/eslint-import-resolver-node/*
+.*/node_modules/normalize-package-data/*
+
+[include]
+
+[libs]
+custom-flow-typed
+
+[lints]
+# all=error
+# unclear-type=off
+
+[options]
+server.max_workers=1
+
+[strict]

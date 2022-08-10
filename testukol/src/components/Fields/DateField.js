@@ -1,8 +1,15 @@
+//@flow
+
 import React, {useState} from 'react'
 import styles from './Fields.module.css'
 import classNames from "classnames";
 
-const DateField = (props) => {
+type DateFieldProps = {
+    value: string,
+    styleClass: string
+}
+
+const DateField = (props : DateFieldProps) : Object => {
     const [value, setValue] = useState(props.value)
 
     return (

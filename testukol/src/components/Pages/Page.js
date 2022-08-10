@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+//@flow
+
+import React, {useEffect, useState} from 'react';
 import TabButton from '../TabButton/TabButton'
 import ConfigPage from "./ConfigPage";
 import ResultPage from "./ResultPage";
@@ -6,8 +8,27 @@ import {CONF_EXAMP_TAB, CONF_TAB, RESULT_TAB} from "../../constants";
 import tabButtonStyles from '../TabButton/TabButton.module.css'
 import ConfigExamplePage from "./ConfigExamplePage";
 
-const Page = (props) => {
+type PageProps = {
+    activeTab: string,
+    setActiveTab: Function
+}
+
+const Page = (props : PageProps) : Object => {
     const [data, setData] = useState([])
+    const [activePage, setActivePage] = useState(<div></div>)
+
+    useEffect(() => {
+            switch (props.activeTab) {
+                case CONF_TAB :
+                    setActivePage(<ConfigPage setData={setData} setActiveTab={props.setActiveTab}/>)
+                case RESULT_TAB:
+                    setActivePage(<ResultPage data={data}/>)
+                case CONF_EXAMP_TAB:
+                    setActivePage(<ConfigExamplePage />)
+                default:
+                    setActivePage(<div></div>)
+            }
+    }, [props.activeTab])
 
     return (
         <div id='pageWrapper'>
@@ -23,18 +44,7 @@ const Page = (props) => {
                            setActiveTab={props.setActiveTab}/>
             </div>
             <div id='workspace'>
-                {(() => {
-                    switch (props.activeTab) {
-                        case CONF_TAB :
-                            return <ConfigPage setData={setData} setActiveTab={props.setActiveTab}/>
-                        case RESULT_TAB:
-                            return <ResultPage data={data}/>
-                        case CONF_EXAMP_TAB:
-                            return <ConfigExamplePage />
-                        default:
-                            return <div></div>
-                    }
-                })()}
+                {activePage}
             </div>
         </div>
     )

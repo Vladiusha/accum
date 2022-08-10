@@ -1,10 +1,17 @@
+//@flow
+
 import React, {useState} from 'react'
 import Button from "../Button/Button";
 import buttonStyles from '../Button/Button.module.css'
 import {validateJson} from '../../utils/jsonUtils'
 import {configSetUp, RESULT_TAB, textareaConfigTabPlaceholder} from "../../constants";
 
-const ConfigPage = (props) => {
+type ConfigPageProps = {
+    setData: Function,
+    setActiveTab: Function
+}
+
+const ConfigPage = (props : ConfigPageProps) : Object => {
     const [configText, setConfigText] = useState("")
 
     const configApply = () => {

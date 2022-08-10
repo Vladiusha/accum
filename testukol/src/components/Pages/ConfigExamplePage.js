@@ -1,3 +1,5 @@
+//@flow
+
 import React from 'react'
 import Button from '../Button/Button';
 import buttonStyles from '../Button/Button.module.css'
@@ -5,7 +7,7 @@ import {exampleConfigText, textCopied, textCopyError} from "../../constants";
 
 
 
-const ConfigExamplePage = () => {
+const ConfigExamplePage = () : Object => {
 
     const copyText = () => {
         navigator.clipboard.writeText(exampleConfigText)

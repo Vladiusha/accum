@@ -1,4 +1,6 @@
-export const validateJson = (jsonStr) => {
+//@flow
+
+export const validateJson = (jsonStr: string) : Object => {
     try {
         const jsonObject = JSON.parse(jsonStr);
         return {success: true, json: jsonObject}

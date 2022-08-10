@@ -1,8 +1,15 @@
+//@flow
+
 import React, {useState} from 'react'
 import styles from './Fields.module.css'
 import classNames from "classnames";
 
-const TextField = (props) => {
+type TextFieldProps = {
+    styleClass: string,
+    placeholder: string
+}
+
+const TextField = (props : TextFieldProps) : Object => {
     const [value, setValue] = useState('')
 
     return (
