@@ -11,10 +11,11 @@ type TextFieldProps = {
 
 const TextField = (props : TextFieldProps) : Object => {
     const [value, setValue] = useState('')
+    const {styleClass, placeholder} = props
 
     return (
-        <input className={classNames(styles.textField, props.styleClass)} type='text' value={value}
-               onChange={e => setValue(e.target.value)} placeholder={props.placeholder}></input>
+        <input className={classNames(styles.textField, styleClass)} type='text' value={value}
+               onChange={e => setValue(e.target.value)} placeholder={placeholder}></input>
     )
 }
 

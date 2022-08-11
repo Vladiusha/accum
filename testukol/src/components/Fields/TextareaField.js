@@ -11,10 +11,11 @@ type TextareaFieldProps = {
 
 const TextareaField = (props : TextareaFieldProps) : Object => {
     const [value, setValue] = useState('')
+    const {styleClass, placeholder} = props
 
     return (
-        <textarea className={classNames(styles.textareaField, props.styleClass)} value={value} onChange={e => setValue(e.target.value)}
-                  placeholder={props.placeholder}></textarea>
+        <textarea className={classNames(styles.textareaField, styleClass)} value={value} onChange={e => setValue(e.target.value)}
+                  placeholder={placeholder}></textarea>
     )
 }
 

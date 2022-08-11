@@ -10,11 +10,16 @@ type ButtonProps = {
     onClick: Function
 }
 
-const Button = (props: ButtonProps) : Object => (
-        <button className={classNames(styles.customButton, styles.customButtonSize, props.styleClass)} onClick={props.onClick}>
-            {props.title}
-        </button>
-    )
+const Button = (props: ButtonProps) : Object => {
+    const {title, styleClass, onClick} = props
 
+    return (
+        title && <button className={classNames(styles.customButton, styles.customButtonSize, styleClass)}
+                              onClick={onClick}>
+                {title}
+            </button>
+
+    )
+}
 
 export default Button;

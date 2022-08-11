@@ -10,10 +10,11 @@ type CheckboxFieldProps = {
 }
 
 const CheckboxField = (props : CheckboxFieldProps) : Object => {
-    const [value, setValue] = useState(props.checked)
+    const {checked, styleClass} = props
+    const [value, setValue] = useState(checked)
 
     return (
-        <input className={classNames(styles.textField, props.styleClass)} type='checkbox' defaultChecked={props.checked}
+        <input className={classNames(styles.textField, styleClass)} type='checkbox' defaultChecked={checked}
                value={value} onChange={e => setValue(e.target.value)}></input>
     )
 }

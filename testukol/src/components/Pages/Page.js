@@ -16,17 +16,22 @@ type PageProps = {
 const Page = (props : PageProps) : Object => {
     const [data, setData] = useState([])
     const [activePage, setActivePage] = useState(<div></div>)
+    const {activeTab, setActiveTab} = props
 
     useEffect(() => {
-            switch (props.activeTab) {
+            switch (activeTab) {
                 case CONF_TAB :
-                    setActivePage(<ConfigPage setData={setData} setActiveTab={props.setActiveTab}/>)
+                    setActivePage(<ConfigPage setData={setData} setActiveTab={setActiveTab}/>)
+                    break
                 case RESULT_TAB:
                     setActivePage(<ResultPage data={data}/>)
+                    break
                 case CONF_EXAMP_TAB:
                     setActivePage(<ConfigExamplePage />)
+                    break
                 default:
                     setActivePage(<div></div>)
+                    break
             }
     }, [props.activeTab])
 
@@ -34,14 +39,14 @@ const Page = (props : PageProps) : Object => {
         <div id='pageWrapper'>
             <div id='tabsWrapper'>
                 <TabButton text={CONF_EXAMP_TAB}
-                           styleClass={ props.activeTab === CONF_EXAMP_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
-                           setActiveTab={props.setActiveTab}/>
+                           styleClass={ activeTab === CONF_EXAMP_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
+                           setActiveTab={setActiveTab}/>
                 <TabButton text={CONF_TAB}
-                           styleClass={ props.activeTab === CONF_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
-                           setActiveTab={props.setActiveTab}/>
+                           styleClass={ activeTab === CONF_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
+                           setActiveTab={setActiveTab}/>
                 <TabButton text={RESULT_TAB}
-                           styleClass={ props.activeTab === RESULT_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
-                           setActiveTab={props.setActiveTab}/>
+                           styleClass={ activeTab === RESULT_TAB ? tabButtonStyles.activeTab : tabButtonStyles.unactiveTab }
+                           setActiveTab={setActiveTab}/>
             </div>
             <div id='workspace'>
                 {activePage}

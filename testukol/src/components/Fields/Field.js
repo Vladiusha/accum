@@ -9,12 +9,16 @@ type FieldProps = {
     value: Object
 }
 
-const Field = (props: FieldProps) : Object => (
-            <div className={classNames(styles.field, styles.fieldStructure)}>
-                <label className={styles.label}>{props.label}</label>
-                {props.value}
-            </div>
-        )
+const Field = (props: FieldProps): Object => {
+    const {label, value} = props
+
+    return (
+        <div className={classNames(styles.field, styles.fieldStructure)}>
+            <label className={styles.label}>{label}</label>
+            {value}
+        </div>
+    )
+}
 
 
 export default Field;

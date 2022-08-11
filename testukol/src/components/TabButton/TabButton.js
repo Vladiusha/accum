@@ -10,10 +10,14 @@ type TabButtonProps = {
     text: string
 }
 
-const TabButton = (props : TabButtonProps) : Object => (
-        <div className={classNames(styles.tabButton, props.styleClass)} onClick={() => props.setActiveTab(props.text)}>
-            {props.text}
+const TabButton = (props : TabButtonProps) : Object => {
+    const {styleClass, setActiveTab, text} = props
+
+    return (
+        text && <div className={classNames(styles.tabButton, styleClass)} onClick={() => setActiveTab(text)}>
+            {text}
         </div>
     )
+}
 
 export default TabButton;
